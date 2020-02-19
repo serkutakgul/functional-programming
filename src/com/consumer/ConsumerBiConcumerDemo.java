@@ -9,8 +9,8 @@ import java.util.function.Consumer;
 
 public class ConsumerBiConcumerDemo {
 
-    //return type: void
-    //single abstract method : accept(T t);
+
+    //single abstract method :  void accept(T t);
 
     public static void main(String[] args) {
 //Concumer
