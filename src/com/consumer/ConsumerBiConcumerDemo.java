@@ -10,6 +10,7 @@ import java.util.function.Consumer;
 public class ConsumerBiConcumerDemo {
 
     //return type: void
+    //single abstract method : accept(T t);
 
     public static void main(String[] args) {
 //Concumer
@@ -28,6 +29,7 @@ public class ConsumerBiConcumerDemo {
         biConsumer.accept(353,"Ireland");
 
         map.forEach((key,value)-> System.out.println(key+" -"+value));
-        map.entrySet().stream().forEach(object -> System.out.println(object));
+
+        //  map.entrySet().stream().forEach(object -> System.out.println(object));
     }
 }
