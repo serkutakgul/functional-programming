@@ -11,14 +11,16 @@ public class StreamDemo1 {
     -----------------------------------------------------------------------------
     *map()                              |          * forEach
     *filter()                           |          * collect
-    *limit()                            |          * count
+    *limit()                            |          * reduce
     *distinct()                         |          * findAny/findFirst
     *flatMap()                          |          * anyMatch/allMatch/noneMatch
-    *peek()                             |          * min/max,reduce,toArray
+    *peek()                             |          * min/max,count,toArray
     ------------------------------------------------------------------------------
      Concatenate streams                |          Parallel stream processing
 
 */
+
+//Stream.of("","","")--->Creating a stream from one or more objects.
 
     public static void main(String[] args) {
 
@@ -29,6 +31,7 @@ public class StreamDemo1 {
         Arrays.stream(cities)
                 .map(city -> city.toLowerCase())
                 .forEach(city -> System.out.println(city));
+
 
         Stream.of(cities)
                 .sorted()
