@@ -9,11 +9,10 @@ import java.util.function.Consumer;
 
 public class ConsumerBiConcumerDemo {
 
-
     //single abstract method :  void accept(T t);
 
     public static void main(String[] args) {
-//Concumer
+ //Concumer
         Consumer<Integer> consumer= (t) -> System.out.println("Value : "+t);
         consumer.accept(1);
 
