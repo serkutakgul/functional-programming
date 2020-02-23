@@ -1,4 +1,4 @@
-package com.predicate;
+package com.java.functionalinterfaces;
 
 import java.util.Arrays;
 import java.util.List;
