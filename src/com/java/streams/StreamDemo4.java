@@ -13,20 +13,21 @@ public class StreamDemo4 {
     public static void main(String[] args) throws IOException {
         //every line is stream
         Stream<String> row
-                = Files.lines(Paths.get("file.txt"));
+                = Files.lines(Paths.get("C:\\Users\\pcpc\\Desktop\\my_spring\\functional-programming\\src\\com\\java\\streams\\file.txt"));
         row.map(x -> x.split(",")).forEach( x-> System.out.println(Arrays.toString(x)));
 
 
 
+
         Stream<String> row2
-                = Files.lines(Paths.get("file.txt"));
+                = Files.lines(Paths.get("C:\\Users\\pcpc\\Desktop\\my_spring\\functional-programming\\src\\com\\java\\streams\\file.txt"));
         Map<String, Integer> map = new HashMap<>();
         map = row2
                 .map(x -> x.split(","))
                 .filter(x -> x.length == 3)
-                .filter(x -> Integer.parseInt(x[1]) > 32)
+                .filter(x -> Integer.parseInt(x[2]) > 32)
                 .collect(Collectors.toMap(
-                        x -> x[0]+x[2],
+                        x -> x[0],
                         x -> Integer.parseInt(x[1])));
 
         for (String key : map.keySet()) {
